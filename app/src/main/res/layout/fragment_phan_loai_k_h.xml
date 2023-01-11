@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/toolbar1"
+        android:background="@color/blue_200"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:id="@+id/back1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_back"
+                android:tint="@color/white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8">
+
+            <TextView
+                android:id="@+id/toolbar_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu Món"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:focusable="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_phanloai"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/toolbar1"/>
+
+</RelativeLayout>
